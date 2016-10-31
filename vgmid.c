@@ -380,7 +380,11 @@ void identifyfile(char *name, char *fullname)
         /* SNES/SFC extensions */
         !checkname(name, "sfc") &&
         !checkname(name, "smc") &&
-        !checkname(name, "spc")) return;
+        !checkname(name, "spc") &&
+        /* GB/GBS extensions */
+        !checkname(name, "gb") &&
+        !checkname(name, "gbc") &&
+        !checkname(name, "gbs")) return;
   }
 
   FILE *in = fopen(name, "rb");
