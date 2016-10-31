@@ -384,7 +384,9 @@ void identifyfile(char *name, char *fullname)
         /* GB/GBS extensions */
         !checkname(name, "gb") &&
         !checkname(name, "gbc") &&
-        !checkname(name, "gbs")) return;
+        !checkname(name, "gbs") &&
+        !checkname(name, "nes") &&
+        !checkname(name, "nsf")) return;
   }
 
   FILE *in = fopen(name, "rb");
